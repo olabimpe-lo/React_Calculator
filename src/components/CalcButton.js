@@ -14,14 +14,27 @@ const getStyleName = (button) => {
   return className[button];
 };
 
-const CalcButton = ({ value }) => {
+const CalcButton = ({ input, value, setInput, setOutput }) => {
   const handleButtonClick = () => {
-    console.log(value);
+    if (input === "0") {
+      return setInput(value);
+    } else if (value === "=") {
+      setOutput(eval(input));
+    } else if (value === "CE") {
+      setInput("");
+    } else if (value === "C") {
+      const RemovalContext = input.slice(0, -1);
+      setInput(RemovalContext);
+    } else {
+      setInput(input + value);
+    }
   };
+
   return (
     <button
       onClick={handleButtonClick}
-      className={`${getStyleName(value)} button`}>
+      className={`${getStyleName(value)} button`}
+    >
       {value}
     </button>
   );

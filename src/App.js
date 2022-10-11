@@ -7,30 +7,33 @@ import CalcProvider from "./components/CalcProvider";
 
 const btnValues = [
   ["%", ".", "CE", "C"],
-  [1, 2, 3, "x"],
-  [4, 5, 6, "-"],
-  [7, 8, 9, "/"],
-  ["=", 0, "+"],
+  ["1", "2", "3", "*"],
+  ["4", "5", "6", "-"],
+  ["7", "8", "9", "/"],
+  ["=", "0", "+"],
 ];
 
 const App = () => {
-  const [input, setInput] = React.useState("0");
-  const [output, setOutput] = React.useState("");
+  const [input, setInput] = useState("0");
+  const [output, setOutput] = useState("0");
 
   return (
     <div>
       <CalcProvider>
         <CalcWrapper>
-          <CalcScreen value={9990008} />
+          <CalcScreen value={input} result={output} />
           <CalcFrame>
             {btnValues.flat().map((btn, i) => (
               <CalcButton
                 key={i}
                 className={btn === "=" ? "equals" : ""}
                 value={btn}
-                onClick={({}) => {
+                onClick={() => {
                   console.log(`${btn}  Button clicked`);
                 }}
+                input={input}
+                setInput={setInput}
+                setOutput={setOutput}
               />
             ))}
           </CalcFrame>

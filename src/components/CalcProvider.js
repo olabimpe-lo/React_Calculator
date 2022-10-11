@@ -8,7 +8,7 @@ const CalcProvider = ({ children }) => {
     result: 0,
   });
 
-  const providerVslue = {
+  const providerValue = {
     calculations,
     setCalculations,
   };
