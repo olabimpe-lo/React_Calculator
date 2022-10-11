@@ -3,12 +3,14 @@
 import "../Styles/CalcScreen.css";
 //import { CalcContext } from "./CalcProvider";
 
-const CalcScreen = ({ value }) => {
+const CalcScreen = ({ value, result }) => {
   //const { calc } = useContext(CalcContext);
 
   return (
     <div className="calcScreen" mode="single">
-      {value}
+      <h3> {value}</h3>
+
+      <h1>{result}</h1>
     </div>
   );
 };
