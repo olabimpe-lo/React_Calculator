@@ -1,0 +1,15 @@
+.calcScreen {
+    height: 3rem;
+    margin-bottom: 3rem;
+    width: 100%;
+    padding: 0 1rem;
+    background-color: #4357692d;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f4f4f4;
+    font-weight: bold;
+    box-sizing: border-box;
+  }
+  

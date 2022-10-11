@@ -1,0 +1,32 @@
+button {
+    background:#8b0000;
+    padding: 2rem;
+    display: flex;
+    color:#ffff;
+    font-size: 2rem;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 1rem;
+  }
+  
+  button:hover {
+    border: dotted;
+    background-color: #012f46;
+  }
+  
+  .equal {
+    background-color: #34207e;
+    grid-column: 1 / 3;
+  }
+  
+  .equal:hover {
+    background-color: #012f46;
+  }
+  
+  .operator{
+    background-color:black;
+  }
+  
